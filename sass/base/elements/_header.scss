@@ -1,0 +1,38 @@
+.site-header {
+	display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+	height: 64px;
+    padding: 1em 15em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 600px;
+	z-index: 99998;
+	background-color: $color__background-body;
+	border-image: $color__access-gradient 1;
+	border-image-width: 0 0 4px 0;
+}
+
+header a {
+	border: 0;
+	border-image: none;
+}
+
+/* In case you are logged in */
+body.logged-in .site-header {  
+    top: 32px;  
+}  
+
+@media screen and (max-width: 782px) {
+	.site-header {
+		position: absolute;
+		padding: 1em;
+	}
+
+	body.logged-in .site-header {  
+		top: 46px;  
+	} 
+}

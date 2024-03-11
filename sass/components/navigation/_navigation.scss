@@ -1,20 +1,25 @@
 .main-navigation {
 	display: block;
-	width: 100%;
 
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: center;
 		padding-left: 0;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+			float: right;
 			position: absolute;
-			top: 100%;
-			left: -999em;
+			right: -999em;
 			z-index: 99999;
+			display: flex;
+			flex-flow: column nowrap;
+			padding-left: 0;
+			background: $color__background-body;
 
 			ul {
 				left: -999em;
@@ -31,7 +36,7 @@
 			}
 
 			a {
-				width: 200px;
+				width: 10em;
 			}
 
 			:hover > a,
@@ -45,12 +50,16 @@
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			right: 0em;
 		}
 	}
 
 	li {
 		position: relative;
+		text-align: right;
+		display: block;
+		width: 100%;
+		height: 100%;
 
 		&:hover > a,
 		&.focus > a {
@@ -60,6 +69,10 @@
 	a {
 		display: block;
 		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		padding: 1em;
+		border: 0;
 	}
 
 	.current_page_item > a,
@@ -71,8 +84,36 @@
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.main-navigation.toggled .nav-menu {
+	position: fixed;
+	top: 48px;
+	right: 0;
+}
+
+.menu-toggle {
+	font-weight: bold;
+	border-image: $color__access-gradient-2 1;
+	border-image-width: 0 0 0 4px;
+	transform-origin: right;
+	transition: .2s;
+
+	&:hover {
+		transform:scaleX(1.05)
+	}
+}
+
+
+.main-navigation.toggled .nav-menu {
+	flex-flow: column nowrap;
+	width: 12em;
+	background: #ffffff;
+	display: flex;
+	padding-left: 0;
+}
+
+.main-navigation.toggled ul li:hover > ul, .main-navigation.toggled ul li.focus > ul {
+	right: 6em;
+	top: 0;
 }
 
 @media screen and (min-width: 37.5em) {

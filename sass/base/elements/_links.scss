@@ -1,5 +1,7 @@
 a {
 	color: $color__link;
+	text-decoration: none;
+	font-weight: bold;
 
 	&:visited {
 		color: $color__link-visited;
@@ -9,10 +11,13 @@ a {
 	&:focus,
 	&:active {
 		color: $color__link-hover;
+		
+		border-image: $color__access-gradient 1;
+		border-image-width: 0 0 2px 0;
 	}
 
 	&:focus {
-		outline: thin dotted;
+		outline: dotted $color__link-hover;
 	}
 
 	&:hover,

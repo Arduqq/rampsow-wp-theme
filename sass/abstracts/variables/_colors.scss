@@ -1,6 +1,6 @@
-$color__background-body: #fff;
-$color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
+$color__background-body: #ffffff;
+$color__background-screen: #ededed;
+$color__background-hr: #3f3f3f;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
@@ -8,13 +8,16 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: #4169e1; //royalblue
-$color__link-visited: #800080; //purple
-$color__link-hover: #191970; //midnightblue
-$color__text-main: #404040;
+$color__link: #4B7D95;
+$color__link-visited: #7F5F95;
+$color__link-hover: #000000;
+$color__text-main: #000000;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+$color__access-gradient: linear-gradient(90deg, #7ac943, #34cb6c, #00cb94, #00c8b8, #00c4d7, #00bdec, #00b4f6, #3fa9f5, #3fa9f5, #83a0fc, #be91f4, #ed80da, #ff72b4, #ff6f86, #ff7d55, #ff931e);
+$color__access-gradient-2: linear-gradient(180deg, #7ac943, #34cb6c, #00cb94, #00c8b8, #00c4d7, #00bdec, #00b4f6, #3fa9f5, #3fa9f5, #83a0fc, #be91f4, #ed80da, #ff72b4, #ff6f86, #ff7d55, #ff931e);

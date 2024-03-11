@@ -1,0 +1,9 @@
+aside {
+    margin: 0 15em;
+}
+
+@media screen and (max-width: 1200px) {
+    aside{
+        margin: 0 1em;
+    }
+  }
